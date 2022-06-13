@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>My Library</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-success" href="#">My Library</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" id="searchTxt" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div id="alertMsg">
+
+    </div>
+
+    <div class="container my-3">
+        <h2>Welcome To My Library</h2>
+        <form id="libraryForm">
+            <div class="form-group row my-3">
+                <label for="bookName" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="bookName" placeholder="Enter Book Name">
+                </div>
+            </div>
+            <div class="form-group row my-3">
+                <label for="Author" class="col-sm-2 col-form-label">Author</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Author" placeholder="Enter Author Name">
+                </div>
+            </div>
+            <fieldset class="form-group row my-3">
+                <legend class="col-form-label col-sm-2 pt-0">Type</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="Biography" value="Biography"
+                            checked>
+                        <label class="form-check-label" for="Biography">
+                            Biography
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="Programming"
+                            value="Programming">
+                        <label class="form-check-label" for="Programming">
+                            Programming
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="Cooking" value="Cooking">
+                        <label class="form-check-label" for="Cooking">
+                            Cooking
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <button type="submit" class="btn btn-primary mb-2" id="addBook">Add Book</button>
+        </form>
+
+        <hr>
+        <h2>Your Books</h2>
+        <div id="table">
+            <table class="table table-dark table-striped my-3">
+                <thead  id="head">
+                    <tr>
+                        <th scope="col">Index</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+<script src="./index.js"></script>
+
+</html>
